@@ -27,7 +27,8 @@ src/skin/v2/
 src/skin/external
 
 # Configuration files with passwords
-src/Include/Config.php
+# Config.php is now env-var based (safe to commit for Vercel deployment)
+# src/Include/Config.php
 orm/propel.php
 
 # Perpl/Propel generated config
