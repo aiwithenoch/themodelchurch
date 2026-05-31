@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "functions": {
+    "src/api/tmc/*.php": {
+      "runtime": "vercel-php@0.7.2"
+    }
+  },
+  "routes": [
+    { "src": "/tmc-api/(.*)", "dest": "/src/api/tmc/$1.php" }
+  ]
+}
