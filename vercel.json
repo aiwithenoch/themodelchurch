@@ -6,17 +6,13 @@
   "functions": {
     "api/tmc/*.php": {
       "runtime": "vercel-php@0.7.2"
+    },
+    "api/churchcrm.php": {
+      "runtime": "vercel-php@0.7.2"
     }
   },
   "routes": [
-    { "src": "/tmc-api/health",         "dest": "/api/tmc/health.php" },
-    { "src": "/tmc-api/members",        "dest": "/api/tmc/members.php" },
-    { "src": "/tmc-api/giving",         "dest": "/api/tmc/giving.php" },
-    { "src": "/tmc-api/events(.*)",     "dest": "/api/tmc/events.php" },
-    { "src": "/tmc-api/sms",            "dest": "/api/tmc/sms.php" },
-    { "src": "/tmc-api/media",          "dest": "/api/tmc/media.php" },
-    { "src": "/tmc-api/volunteers(.*)", "dest": "/api/tmc/volunteers.php" },
-    { "src": "/tmc-api/groups(.*)",     "dest": "/api/tmc/groups.php" },
-    { "src": "/tmc-api/prayer(.*)",     "dest": "/api/tmc/prayer.php" }
+    { "src": "/api/tmc/(.*)", "dest": "/api/tmc/$1" },
+    { "src": "/(.*)", "dest": "/api/churchcrm.php" }
   ]
 }
