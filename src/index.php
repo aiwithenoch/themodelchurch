@@ -1,7 +1,11 @@
 <?php
 
-// Load composer autoloader first so we can use VersionUtils utility
-require_once __DIR__ . '/vendor/autoload.php';
+// Load composer autoloader (fallback to root vendor for Vercel serverless)
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
+} else {
+    require_once __DIR__ . '/../vendor/autoload.php';
+}
 
 use ChurchCRM\Authentication\AuthenticationManager;
 use ChurchCRM\dto\SystemConfig;
