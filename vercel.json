@@ -3,14 +3,10 @@
   "buildCommand": "echo 'No build step'",
   "installCommand": "echo 'No install'",
   "outputDirectory": ".",
-  "functions": {
-    "api/**/*.php": {
-      "runtime": "vercel-php@0.7.2"
-    },
-    "api/*.php": {
-      "runtime": "vercel-php@0.7.2"
-    }
-  },
+  "builds": [
+    { "src": "api/**/*.php", "use": "vercel-php@0.7.2" },
+    { "src": "api/*.php", "use": "vercel-php@0.7.2" }
+  ],
   "routes": [
     { "src": "/api/tmc/(.*)", "dest": "/api/tmc/$1" },
     { "src": "/(.*)", "dest": "/api/churchcrm.php" }
