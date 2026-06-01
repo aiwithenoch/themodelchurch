@@ -79,9 +79,9 @@
   },
   "autoload": {
     "psr-4": {
-      "ChurchCRM\\": "ChurchCRM/"
+      "ChurchCRM\\": "src/ChurchCRM/"
     },
-    "classmap": ["ChurchCRM/"]
+    "classmap": ["src/ChurchCRM/"]
   },
   "config": {
     "allow-plugins": {
